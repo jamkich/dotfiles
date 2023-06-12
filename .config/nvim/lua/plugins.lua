@@ -1,5 +1,4 @@
 local status, packer = pcall(require, "packer")
-
 if (not status) then
   print("Packer is not installed")
   return
@@ -25,11 +24,12 @@ packer.startup(function(use)
   use 'hrsh7th/nvim-cmp'             -- Completion
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
+  use 'folke/todo-comments.nvim'
+
   use {
     'nvim-treesitter/nvim-treesitter',
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   }
-
   use 'jose-elias-alvarez/null-ls.nvim' --- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
@@ -37,6 +37,12 @@ packer.startup(function(use)
   use 'nvim-telescope/telescope-file-browser.nvim'
   use 'akinsho/nvim-bufferline.lua'
   use 'norcalli/nvim-colorizer.lua'
+  use { 'numToStr/Comment.nvim',
+    requires = {
+      'JoosepAlviste/nvim-ts-context-commentstring'
+    }
+  }
+
 
   use 'lewis6991/gitsigns.nvim'
   use 'dinhhuy258/git.nvim' -- For git blame & browser
