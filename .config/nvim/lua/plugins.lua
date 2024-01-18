@@ -21,6 +21,7 @@ packer.startup(function(use)
   use 'onsails/lspkind-nvim'         -- vscode-like pictograms
   use 'hrsh7th/cmp-buffer'           -- nvim-cmp source for buffer words
   use 'hrsh7th/cmp-nvim-lsp'         -- nvim-cmp source for neovim's built-in LSP
+  use 'hrsh7th/cmp-path'             -- nvim-mcmp source for path
   use 'hrsh7th/nvim-cmp'             -- Completion
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
@@ -42,7 +43,7 @@ packer.startup(function(use)
       'JoosepAlviste/nvim-ts-context-commentstring'
     }
   }
-
+  use 'andweeb/presence.nvim'
 
   use 'lewis6991/gitsigns.nvim'
   use 'dinhhuy258/git.nvim' -- For git blame & browser

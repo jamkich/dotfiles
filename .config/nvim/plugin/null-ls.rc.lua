@@ -19,6 +19,7 @@ null_ls.setup {
         PRETTIERD_DEFAULT_CONFIG = vim.fn.expand("~/.config/.prettierrc"),
       },
     }),
+    null_ls.builtins.formatting.eslint_d, -- Fixed onSave error
     null_ls.builtins.diagnostics.eslint_d.with({
       diagnostics_format = '[eslint] #{m}\n(#{c})'
     }),
