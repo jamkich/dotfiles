@@ -46,3 +46,14 @@ keymap.set("n", "<C-w><down>", "<C-w>-")
 keymap.set("n", "<C-j>", function()
   vim.diagnostic.goto_next()
 end, opts)
+
+-- remember format cringe not good
+-- greatest keymap every
+keymap.set("x", "<leader>p", '"_dP')
+
+-- unbind arrow keys
+keymap.set("n", "<up>", "<nop>")
+keymap.set("n", "<down>", "<nop>")
+keymap.set("n", "<left>", "<nop>")
+keymap.set("n", "<right>", "<nop>")
+
